@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../public/output.css" rel="stylesheet">
     <link rel="stylesheet" href="../public/style.css">
+<<<<<<< HEAD
     <script src="../public/jquery-3.7.1.min.js"></script>
     <script src="../public/scripte.js"></script>
+=======
+>>>>>>> 2008c2cdcd23ffef12cad63a8542e70e77066109
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +33,7 @@
             <div x-show="open" x-transition:enter="transition ease-in-out duration-300" class="flex flex-col w-full h-auto
           md:hidden">
                 <div class="flex flex-col items-center justify-center gap-2">
+<<<<<<< HEAD
                     <a href="index.php?action=guide">Guide</a>
                     <a href="index.php?action=calculator">Outil de calcul</a>
                     <a href="index.php?action=aboutUs">A propos</a>
@@ -43,6 +47,21 @@
                 <a href="index.php?action=calculator">Outil de calcul</a>
                 <a href="index.php?action=aboutUs">A propos</a>
                 <a href="index.php?action=contact">Contactez-nous</a>
+=======
+                    <a href="">Guide</a>
+                    <a href="">Outil de calcul</a>
+                    <a href="">A propos</a>
+                    <a href="">Contactez-nous</a>
+                    <button>Login</button>
+                    <button>Sign Up</button>
+                </div>
+            </div>
+            <div class="hidden w-3/5 items-center justify-evenly font-semibold md:flex">
+                <a href="">Guide</a>
+                <a href="">Outil de calcul</a>
+                <a href="">A propos</a>
+                <a href="">Contactez-nous</a>
+>>>>>>> 2008c2cdcd23ffef12cad63a8542e70e77066109
             <div class="flex justify-center h-screen">
                 <div x-data="{ dropdownOpen: true }" class="relative my-32">
                     <button @click="dropdownOpen = !dropdownOpen"
@@ -82,8 +101,13 @@
             </div>
             <div class="hidden w-1/5 items-center justify-evenly font-semibold
           md:flex">
+<<<<<<< HEAD
                 <a href="index.php?action=login">Login</a>
                 <a href="index.php?action=signin">Sign Up</a>
+=======
+                <button>Login</button>
+                <button>Sign Up</button>
+>>>>>>> 2008c2cdcd23ffef12cad63a8542e70e77066109
             </div>
             <button class="text-gray-500 w-10 h-10 relative focus:outline-none 
                           md:hidden

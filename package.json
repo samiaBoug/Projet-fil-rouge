@@ -1,8 +1,11 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.4.3"
+<<<<<<< HEAD
   },
   "dependencies": {
     "jquery": "^3.7.1"
+=======
+>>>>>>> 2008c2cdcd23ffef12cad63a8542e70e77066109
   }
 }

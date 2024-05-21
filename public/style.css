@@ -35,13 +35,20 @@ footer {
     height: 100vh;
     background-image:
         linear-gradient(to right bottom,
+<<<<<<< HEAD
             rgb(255, 255, 255)
+=======
+            rgba(255, 255, 255, 0.919)
+>>>>>>> 2008c2cdcd23ffef12cad63a8542e70e77066109
         url('img/header-background.jpg'));
 
     background-size: cover;
     background-position: top;
     position: relative;
+<<<<<<< HEAD
     width: 100%;
+=======
+>>>>>>> 2008c2cdcd23ffef12cad63a8542e70e77066109
 
 }
 
@@ -110,8 +117,11 @@ footer {
     background-color: #fff;
     color: #777;
     font-size: 14px;
+<<<<<<< HEAD
 }
 form{
     background-color: white ;
     border: solid 1px 
+=======
+>>>>>>> 2008c2cdcd23ffef12cad63a8542e70e77066109
 }

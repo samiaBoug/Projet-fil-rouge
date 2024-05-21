@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- requette -->
 <!-- connx -->
 <?php 
@@ -11,3 +12,18 @@ return $connx ;
 }
 
 
+=======
+<!-- connx -->
+<?php
+$db = 'calculatorCarbone';
+$host = 'localHost';
+$user = 'root';
+$password = '';
+$conn = 'new PDO()';
+
+
+?>
+<!-- sing in -->
+
+<!-- log in -->
+>>>>>>> 2008c2cdcd23ffef12cad63a8542e70e77066109
