@@ -1,7 +1,0 @@
-<!-- fonction -->
-<?php 
-function userslistAction(){
-
-} 
-
-?>
