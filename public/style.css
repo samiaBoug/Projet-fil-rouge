@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+
+header {
+
+    margin-bottom: 10rem;
+    height: 100vh;
+    background-image:
+        linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.293),
+            rgba(255, 255, 255, 0.56)),
+        url('img/header-background.jpg');
+
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+
+}
+
 .green-score {
     color: rgba(101, 183, 65, 1);
     font-weight: bolder;
@@ -30,27 +48,6 @@ footer {
 
 
 
-
-.header {
-    height: 100vh;
-    background-image:
-        linear-gradient(to right bottom,
-<<<<<<< HEAD
-            rgb(255, 255, 255)
-=======
-            rgba(255, 255, 255, 0.919)
->>>>>>> 2008c2cdcd23ffef12cad63a8542e70e77066109
-        url('img/header-background.jpg'));
-
-    background-size: cover;
-    background-position: top;
-    position: relative;
-<<<<<<< HEAD
-    width: 100%;
-=======
->>>>>>> 2008c2cdcd23ffef12cad63a8542e70e77066109
-
-}
 
 .brand-box {
     position: absolute;
@@ -117,11 +114,10 @@ footer {
     background-color: #fff;
     color: #777;
     font-size: 14px;
-<<<<<<< HEAD
+
 }
 form{
     background-color: white ;
     border: solid 1px 
-=======
->>>>>>> 2008c2cdcd23ffef12cad63a8542e70e77066109
+
 }
