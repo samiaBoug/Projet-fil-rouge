@@ -85,8 +85,8 @@
             </div>
             <div class="hidden w-1/5 items-center justify-evenly font-semibold
           md:flex">
-                <button>Login</button>
-                <button>Sign Up</button>
+                <a href="index.php?action=login">Login</a>
+                <a href="index.php?action=signup">Sign Up</a>
             </div>
             <button class="text-gray-500 w-10 h-10 relative focus:outline-none 
                           md:hidden

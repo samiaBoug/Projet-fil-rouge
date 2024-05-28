@@ -1,7 +1,7 @@
 <?php
 require_once '../db.php';
 //inserer le registre 
-function novRegistreUtilis($date , $idEntrep){
+function novRegistreUtilis($date , $idUtilis){
     $conn = getDbConn();
     $stm = $conn->prepare("insert into registermentuel (dateRegister , idUtilis) VALUES (:date, :id)");
     $stm->bindParam(':date', $date);
@@ -10,7 +10,7 @@ function novRegistreUtilis($date , $idEntrep){
 }
 function novRegistreEntrep($date , $idEntrep){
     $conn = getDbConn();
-    $stm = $conn->prepare("insert into registermentuel (dateRegister , idUtilis) VALUES (:date, :id)");
+    $stm = $conn->prepare("insert into registermentuel (dateRegister , idEntrep) VALUES (:date, :id)");
     $stm->bindParam(':date', $date);
     $stm->bindParam(':id', $idEntrep);
     $stm->execute();   
@@ -24,6 +24,17 @@ function novValeurs($valeur, $idRegister, $idActivite){
     $stm->bindParam(':idRegister', $idRegister);
     $stm->bindParam('idActivite', $idActivite);
     $stm->execute();
+
+}
+//trouver register 
+function trouverRegister($id, $date){
+    $conn = getDbConn();
+    $stm = $conn->prepare("select idRegister from register where idutilis = :id or idEntrep = :id and date = :date ");
+    $stm->bindParam(':id', $id);
+    $stm->bindParam(':date', $date);
+    $id = $stm->fetch(PDO::FETCH_ASSOC);
+    $idRegister = $id['idRegister'];
+    return $idRegister;
 
 }
 

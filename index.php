@@ -1,3 +1,3 @@
 <?php
 
-require_once 'router.php';
+require __DIR__ . '/router.php';

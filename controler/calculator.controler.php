@@ -67,14 +67,6 @@ function calucule(){
         }
  
 
-
-
-
-
-
-
-
-
     }else{
     require __DIR__ . '/../view/calculator.php'; 
        

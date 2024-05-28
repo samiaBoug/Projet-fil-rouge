@@ -20,7 +20,7 @@ include 'include/header.php';
 </header>
 <main>
     <div class="flex">
-        <img src="../public/img/home-img1.svg" alt="" class="w-1/2">
+        <img src="public/img/home-img1.svg" alt="" class="w-1/2">
         <div>
             <h2>Vous vous demandez comment vos habitudes quotidiennes affectent réellement l'environnement ? </h2>
             <p>Ne vous inquiétez pas, vous n'êtes pas seul ! Si vous n'êtes pas familier avec le calcul de votre empreinte carbone et son impact sur la planète, laissez-nous vous guider à travers le processus et découvrir ensemble comment vous pouvez faire une différence positive.</p>
@@ -29,7 +29,7 @@ include 'include/header.php';
     </div >
 
         <div class="flex">
-        <img src="../public/img/img-home2.svg" alt="" class="w-1/2">
+        <img src="public/img/img-home2.svg" alt="" class="w-1/2">
         <div>
             <h2>Vous vous demandez quelle est votre empreinte carbone ?</h2>
             <p>Pas de souci ! Si vous souhaitez évaluer l'impact environnemental de vos actions et obtenir un score clair de votre empreinte carbone, vous êtes au bon endroit. Découvrez notre outil de calcul d'empreinte carbone et obtenez un bilan personnalisé de votre contribution à la durabilité environnementale.</p>

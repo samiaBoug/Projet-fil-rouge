@@ -5,7 +5,7 @@
 
                 <div :class="open ? 'hidden':'flex'" class="flex px-6 py-0 w-1/2 items-center 
                           md:w-1/5 md:px-1 md:py-11 md:flex md:items-center " x-transition:enter="transition ease-out duration-300">
-                    <a href=""><img src="../public/img/logoGreenScore.png" alt="logo" class="h-24 w-auto "></a>
+                    <a href=""><img src="public/img/logoGreenScore.png" alt="logo" class="h-24 w-auto "></a>
                 </div>
                 <p class="w-1/2">
                     Chez Green Score, notre mission est de fournir des outils pratiques et des ressources inspirantes pour aider chacun à
