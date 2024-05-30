@@ -41,31 +41,31 @@ include 'include/header.php';
     <div>
         <label class="">Nom</label>
         <input type="text" placeholder="" name="nom" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-        <div style="color: brown;"><?php if(isset($erreurs['nom'])) { echo htmlspecialchars($erreurs['nom']); } ?></div>
+        <div class="erreurs"><?php if(isset($erreurs['nom'])) { echo htmlspecialchars($erreurs['nom']); } ?></div>
     </div>
 
     <div>
         <label class="">Prenom</label>
         <input type="text" name="prenom" placeholder="" class="" />
-        <div style="color: brown;"><?php if(isset($erreurs['prenom'])) { echo htmlspecialchars($erreurs['prenom']); } ?></div>
+        <div class="erreurs"><?php if(isset($erreurs['prenom'])) { echo htmlspecialchars($erreurs['prenom']); } ?></div>
     </div>
 
     <div>
         <label class="">Email </label>
         <input type="email" placeholder="" name="email" class="" />
-        <div style="color: brown;"><?php if(isset($erreurs['email'])) { echo htmlspecialchars($erreurs['email']); } ?></div>
+        <div class="erreurs"><?php if(isset($erreurs['email'])) { echo htmlspecialchars($erreurs['email']); } ?></div>
     </div>
 
     <div>
         <label class="">Mot de passe</label>
         <input type="password" placeholder="" name="motDePasse" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-        <div style="color: brown;"><?php if(isset($erreurs['motDePasse'])) { echo htmlspecialchars($erreurs['motDePasse']); } ?></div>
+        <div class="erreurs"><?php if(isset($erreurs['motDePasse'])) { echo htmlspecialchars($erreurs['motDePasse']); } ?></div>
     </div>
 
     <div>
         <label class="">Repeter mot de passe</label>
         <input type="password" name="confirmerMotDePasse" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-        <div style="color: brown;"><?php if(isset($erreurs['confirmerMotDePasse'])) { echo htmlspecialchars($erreurs['confirmerMotDePasse']); } ?></div>
+        <div class="erreurs"><?php if(isset($erreurs['confirmerMotDePasse'])) { echo htmlspecialchars($erreurs['confirmerMotDePasse']); } ?></div>
     </div>
 
     <button type="submit" name="signUpUtilis" class="">
@@ -78,43 +78,43 @@ include 'include/header.php';
         <div>
             <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Nom de l'entreprise</label>
             <input type="text" name="nom" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-            <div><?= htmlspecialchars($erreurs['nom']) ?></div>
+            <div class="erreurs"><?= htmlspecialchars($erreurs['nom']) ?></div>
         </div>
 
         <div>
             <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Secteur d'activite</label>
             <input type="text" name="secteur" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-            <div><?= htmlspecialchars($erreurs['secteur']) ?></div>
+            <div class="erreurs"><?= htmlspecialchars($erreurs['secteur']) ?></div>
             
         </div>
 
             <div>
             <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Taille de l'entreprise </label>
             <input type="number" name="taille" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-            <div><?= htmlspecialchars($erreurs['taille']) ?></div>
+            <div class="erreurs"><?= htmlspecialchars($erreurs['taille']) ?></div>
             
         </div>
             <div>
                 <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Adresse </label>
                 <input type="text" name="adresse" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                <div><?= htmlspecialchars($erreurs['adresse']) ?></div>
+                <div class="erreurs"><?= htmlspecialchars($erreurs['adresse']) ?></div>
             </div>
             <div>
                 <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email </label>
                 <input type="email" name="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                <div><?= htmlspecialchars($erreurs['email']) ?></div>
+                <div class="erreurs"><?= htmlspecialchars($erreurs['email']) ?></div>
             </div>
 
             <div>
                 <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Mot de passe</label>
                 <input type="password" name="motDePasse" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                <div><?= htmlspecialchars($erreurs['motDePasse']) ?></div>  
+                <div class="erreurs"><?= htmlspecialchars($erreurs['motDePasse']) ?></div>  
             </div>
 
                     <div>
                         <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Repeter mot de passe</label>
                         <input type="password" name="confirmerMotDePasse" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                        <div><?= htmlspecialchars($erreurs['confirmerMotDePasse']) ?></div>  
+                        <div class="erreurs"><?= htmlspecialchars($erreurs['confirmerMotDePasse']) ?></div>  
                     
                     </div>
 

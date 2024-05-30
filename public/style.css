@@ -30,6 +30,10 @@ header {
     font-weight: bolder;
 }
 /* main */
+.erreurs{
+    color: brown;
+    font-weight: lighter;
+}
 a, li,
 h1,
 h2,

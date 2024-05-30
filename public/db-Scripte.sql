@@ -71,3 +71,25 @@ ADD COLUMN emailEntrep
 
 INSERT INTO `calculatorcarbone`.`utilisateur` (`nomUtilis`, `prenomUtilis`, `emailUtilis`, `motDePasseUtilis`) VALUES ('bougtoub', 'samia', 'email@gmail.com', '123456789');
 
+INSERT INTO `calculatorcarbone`.`categorie` (`nomCategorie`) VALUES ('Transports');
+INSERT INTO `calculatorcarbone`.`categorie` (`nomCategorie`) VALUES ('Consommation d\'énergie');
+INSERT INTO `calculatorcarbone`.`categorie` (`nomCategorie`) VALUES ('Déchets');
+INSERT INTO `calculatorcarbone`.`categorie` (`nomCategorie`) VALUES ('Alimentation');
+
+INSERT INTO `calculatorcarbone`.`activite` (`nomActivite`, `idCategorie`) VALUES ('Kilomètres parcourus en voiture', '1');
+INSERT INTO `calculatorcarbone`.`activite` (`nomActivite`, `idCategorie`) VALUES ('Kilomètres parcourus en transport en commun', '1');
+INSERT INTO `calculatorcarbone`.`activite` (`nomActivite`, `idCategorie`) VALUES ('Kilomètres parcourus en taxi', '1');
+INSERT INTO `calculatorcarbone`.`activite` (`nomActivite`, `idCategorie`) VALUES ('Kilomètres parcourus à vélo', '1');
+INSERT INTO `calculatorcarbone`.`activite` (`nomActivite`, `idCategorie`) VALUES ('Facture d\'électricité', '2');
+INSERT INTO `calculatorcarbone`.`activite` (`nomActivite`, `idCategorie`) VALUES ('Facture de gaz', '2');
+INSERT INTO `calculatorcarbone`.`activite` (`nomActivite`, `idCategorie`) VALUES ('Quantité de déchets produits', '3');
+INSERT INTO `calculatorcarbone`.`activite` (`nomActivite`, `idCategorie`) VALUES ('Nombre de repas par jour', '4');
+
+UPDATE `calculatorcarbone`.`activite` SET `facteurActivite` = '0,195', `unite` = 'kg CO2' WHERE (`idActivite` = '1');
+UPDATE `calculatorcarbone`.`activite` SET `facteurActivite` = '0,035', `unite` = 'kg CO2' WHERE (`idActivite` = '2');
+UPDATE `calculatorcarbone`.`activite` SET `facteurActivite` = ' 0,180', `unite` = 'kg CO2' WHERE (`idActivite` = '3');
+UPDATE `calculatorcarbone`.`activite` SET `facteurActivite` = '0', `unite` = 'kg CO2' WHERE (`idActivite` = '4');
+UPDATE `calculatorcarbone`.`activite` SET `facteurActivite` = '2,5', `unite` = 'kg CO2' WHERE (`idActivite` = '8');
+UPDATE `calculatorcarbone`.`activite` SET `facteurActivite` = '0,46', `unite` = 'kg CO2' WHERE (`idActivite` = '5');
+UPDATE `calculatorcarbone`.`activite` SET `facteurActivite` = '8,1', `unite` = 'kg CO2' WHERE (`idActivite` = '6');
+UPDATE `calculatorcarbone`.`activite` SET `facteurActivite` = '0,2', `unite` = 'kg CO2' WHERE (`idActivite` = '7');

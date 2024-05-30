@@ -1,7 +1,6 @@
 <?php
         require __DIR__ . '/controler/user.controler.php';
         require __DIR__ . '/controler/calculator.controler.php';
-        require __DIR__ . '/controler/admin.controler.php';
 
 $action = $_GET['action'];
 
@@ -17,8 +16,8 @@ switch($action){
         require __DIR__ . '/view/contact.php';
         break;
 
-    case 'calculator':
-        calucule();
+    case 'calculeEmprinteCarbone':
+        calculer();
         break;
 
     case 'login':
@@ -40,6 +39,4 @@ switch($action){
         http_response_code(404);
         require __DIR__ . '/view/404.php';
         break;
-  
-
 }

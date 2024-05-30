@@ -47,7 +47,7 @@ if(isset($_SESSION['id'])){
                 <div class="flex flex-col  justify-center gap-2 ">
                     <a href="index.php?action=home">Acceuil</a>
                     <a href="index.php?action=guide">Guide</a>
-                    <a href="index.php?action=calculator" class="<?= $isLog ?>">Outil de calcul</a>
+                    <a href="index.php?action=calculeEmprinteCarbone" class="<?= $isLog ?>">Outil de calcul</a>
                     <a href="index.php?action=aboutUs">A propos</a>
                     <a href="index.php?action=contact">Contactez-nous</a>
                     <div class="hidden w-1/5  justify-evenly font-semibold
@@ -60,7 +60,7 @@ if(isset($_SESSION['id'])){
             <div class="hidden w-3/5 mt-2 justify-evenly font-semibold md:flex">
                 <a href="index.php?action=home">Acceuil</a>
                 <a href="index.php?action=guide">Guide</a>
-                <a href="index.php?action=calculator" class="<?= $isLog ?>">Outil de calcul</a>
+                <a href="index.php?action=calculeEmprinteCarbone" class="<?= $isLog ?>">Outil de calcul</a>
                 <a href="index.php?action=aboutUs">A propos</a>
                 <a href="index.php?action=contact">Contactez-nous</a>
             <div class="">

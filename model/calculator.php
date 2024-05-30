@@ -1,18 +1,22 @@
 <?php
-require_once '../db.php';
+require_once __DIR__ . '/../db.php';
 //inserer le registre 
-function novRegistreUtilis($date , $idUtilis){
+function novRegistreUtilis($date , $idUtilis, $profil ,$mois){
     $conn = getDbConn();
-    $stm = $conn->prepare("insert into registermentuel (dateRegister , idUtilis) VALUES (:date, :id)");
+    $stm = $conn->prepare("insert into registermentuel (dateRegister , idUtilis , profil , moi) VALUES (:date, :id , :profil , :mois)");
     $stm->bindParam(':date', $date);
     $stm->bindParam(':id', $idUtilis);
+    $stm->bindParam(':profil', $profil);
+    $stm->bindParam(':mois', $mois);
     $stm->execute();   
 }
-function novRegistreEntrep($date , $idEntrep){
+function novRegistreEntrep($date , $idEntrep, $profil, $mois){
     $conn = getDbConn();
-    $stm = $conn->prepare("insert into registermentuel (dateRegister , idEntrep) VALUES (:date, :id)");
+    $stm = $conn->prepare("insert into registermentuel (dateRegister , idEntrep , profil, moi) VALUES (:date, :id , :profil, :mois)");
     $stm->bindParam(':date', $date);
     $stm->bindParam(':id', $idEntrep);
+    $stm->bindParam(':profil', $profil);
+    $stm->bindParam(':mois', $mois);
     $stm->execute();   
 }
 
@@ -24,19 +28,33 @@ function novValeurs($valeur, $idRegister, $idActivite){
     $stm->bindParam(':idRegister', $idRegister);
     $stm->bindParam('idActivite', $idActivite);
     $stm->execute();
-
 }
 //trouver register 
-function trouverRegister($id, $date){
+function trouverRegisterUtilis($id, $mois, $profil){
     $conn = getDbConn();
-    $stm = $conn->prepare("select idRegister from register where idutilis = :id or idEntrep = :id and date = :date ");
+    $stm = $conn->prepare("SELECT idRegister FROM registermentuel WHERE idUtilis = :id AND moi = :mois AND profil = :profil");
     $stm->bindParam(':id', $id);
-    $stm->bindParam(':date', $date);
-    $id = $stm->fetch(PDO::FETCH_ASSOC);
-    $idRegister = $id['idRegister'];
-    return $idRegister;
-
+    $stm->bindParam(':mois', $mois);
+    $stm->bindParam(':profil', $profil);
+    $stm->execute();
+    $idRegister = $stm->fetch(PDO::FETCH_ASSOC);
+    return $idRegister; 
 }
+
+function trouverRegisterEntrep($id, $mois, $profil){
+    $conn = getDbConn();
+    $stm = $conn->prepare("SELECT idRegister FROM registermentuel WHERE idEntrep = :id AND moi = :mois AND profil = :profil");
+    $stm->bindParam(':id', $id);
+    $stm->bindParam(':mois', $mois);
+    $stm->bindParam(':profil', $profil);
+    $stm->execute();
+    $idRegister = $stm->fetch(PDO::FETCH_ASSOC);
+    return $idRegister; 
+}
+
+
+
+
 
 //aficher les categorie 
 function getCategorie(){
