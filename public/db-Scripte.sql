@@ -70,3 +70,4 @@ ADD COLUMN emailEntrep
  VARCHAR(200) ;
 
 INSERT INTO `calculatorcarbone`.`utilisateur` (`nomUtilis`, `prenomUtilis`, `emailUtilis`, `motDePasseUtilis`) VALUES ('bougtoub', 'samia', 'email@gmail.com', '123456789');
+

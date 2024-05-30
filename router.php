@@ -29,8 +29,11 @@ switch($action){
         signup();
         break;
 
-    case 'profil':
-        require __DIR__ . '/view/profil.php';
+    case 'profilUtilis':
+       profil();
+        break;
+    case 'profilEntrep':
+        profil();
         break;
 
     default: // add a default case to handle unknown actions

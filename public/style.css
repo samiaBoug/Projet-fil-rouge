@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* header */
 header {
-
+    
     margin-bottom: 10rem;
     height: 100vh;
     background-image:
@@ -19,12 +19,17 @@ header {
 
 
 }
-
+.hide{
+    display: none;
+}
+.logo{
+ margin-top: -3rem;
+}
 .green-score {
     color: rgba(101, 183, 65, 1);
     font-weight: bolder;
 }
-
+/* main */
 a, li,
 h1,
 h2,
@@ -36,7 +41,12 @@ button {
     font-family: "Roboto";
     font-weight: normal;
 }
-
+input{
+    border:solid 1px
+}
+.btn::hover{
+    cursor: pointer;
+}
 p {
     font-family: "Montserrat";
 

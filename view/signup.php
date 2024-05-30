@@ -3,8 +3,7 @@ include 'include/header.php';
 ?>
 
  <!-- component -->
-<section class="bg-white dark:bg-gray-900">
-  
+
         <div class="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
             <div class="w-full">
                 <h1 class="text-2xl font-semibold tracking-wider text-gray-800 capitalize dark:text-white">
@@ -25,7 +24,7 @@ include 'include/header.php';
                             </span>
                         </button>
 
-                        <button class="personne flex justify-center w-full px-6 py-3 mt-4 text-blue-500 border border-blue-500 rounded-md md:mt-0 md:w-auto md:mx-2 dark:border-blue-400 dark:text-blue-400 focus:outline-none" >
+                        <button class="personne " >
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-1/5 h-1/5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
@@ -36,80 +35,91 @@ include 'include/header.php';
                         </button>
                     </div>
                 </div>
+                </header>
 
-               <form class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2" id="formPersonne" method="post" action="index.php?action=signup">
-                    <div>
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Nom</label>
-                        <input type="text" placeholder="" name="nom" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
+                <form class="" id="formPersonne" method="post" action="index.php?action=signup">
+    <div>
+        <label class="">Nom</label>
+        <input type="text" placeholder="" name="nom" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+        <div style="color: brown;"><?php if(isset($erreurs['nom'])) { echo htmlspecialchars($erreurs['nom']); } ?></div>
+    </div>
 
-                    <div>
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Prenom</label>
-                        <input type="text" name="prenom" placeholder="Snow" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                     </div>
+    <div>
+        <label class="">Prenom</label>
+        <input type="text" name="prenom" placeholder="" class="" />
+        <div style="color: brown;"><?php if(isset($erreurs['prenom'])) { echo htmlspecialchars($erreurs['prenom']); } ?></div>
+    </div>
 
-                    <div>
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email </label>
-                        <input type="email" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
+    <div>
+        <label class="">Email </label>
+        <input type="email" placeholder="" name="email" class="" />
+        <div style="color: brown;"><?php if(isset($erreurs['email'])) { echo htmlspecialchars($erreurs['email']); } ?></div>
+    </div>
 
-                    <div>
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Mot de passe</label>
-                        <input type="password" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
+    <div>
+        <label class="">Mot de passe</label>
+        <input type="password" placeholder="" name="motDePasse" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+        <div style="color: brown;"><?php if(isset($erreurs['motDePasse'])) { echo htmlspecialchars($erreurs['motDePasse']); } ?></div>
+    </div>
 
-                    <div>
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">repeter mot de passe</label>
-                        <input type="password" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
+    <div>
+        <label class="">Repeter mot de passe</label>
+        <input type="password" name="confirmerMotDePasse" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+        <div style="color: brown;"><?php if(isset($erreurs['confirmerMotDePasse'])) { echo htmlspecialchars($erreurs['confirmerMotDePasse']); } ?></div>
+    </div>
 
-                    <button type="submit" name="signUpUtilis"
-                        class="flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                        <span>S'inscrire </span>
+    <button type="submit" name="signUpUtilis" class="">
+        <span>S'inscrire</span>
+    </button>
+</form>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:-scale-x-100" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                </form>
                 
-                <form class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2" id="formEntreprise">
-                    <div>
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Nom de l'entreprise</label>
-                        <input type="text" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
+    <form class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2" id="formEntreprise" method="post" action="index.php?action=signup">
+        <div>
+            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Nom de l'entreprise</label>
+            <input type="text" name="nom" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+            <div><?= htmlspecialchars($erreurs['nom']) ?></div>
+        </div>
 
-                    <div>
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Secteur d'activite</label>
-                        <input type="text" placeholder="Snow" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                     </div>
-                     <div>
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Taille de l'entreprise </label>
-                        <input type="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
-                    <div>
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Adresse </label>
-                        <input type="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
-                    <div>
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email </label>
-                        <input type="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
+        <div>
+            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Secteur d'activite</label>
+            <input type="text" name="secteur" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+            <div><?= htmlspecialchars($erreurs['secteur']) ?></div>
+            
+        </div>
 
-                    <div>
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Mot de passe</label>
-                        <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
+            <div>
+            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Taille de l'entreprise </label>
+            <input type="number" name="taille" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+            <div><?= htmlspecialchars($erreurs['taille']) ?></div>
+            
+        </div>
+            <div>
+                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Adresse </label>
+                <input type="text" name="adresse" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                <div><?= htmlspecialchars($erreurs['adresse']) ?></div>
+            </div>
+            <div>
+                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email </label>
+                <input type="email" name="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                <div><?= htmlspecialchars($erreurs['email']) ?></div>
+            </div>
+
+            <div>
+                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Mot de passe</label>
+                <input type="password" name="motDePasse" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                <div><?= htmlspecialchars($erreurs['motDePasse']) ?></div>  
+            </div>
 
                     <div>
                         <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Repeter mot de passe</label>
-                        <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <input type="password" name="confirmerMotDePasse" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <div><?= htmlspecialchars($erreurs['confirmerMotDePasse']) ?></div>  
+                    
                     </div>
 
                     <button type="submit" name="signUpEntrep"
-                        class="flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                        class="flex items-center justify-between  px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                         <span>S'inscrire </span>
 
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:-scale-x-100" viewBox="0 0 20 20" fill="currentColor">
@@ -122,8 +132,8 @@ include 'include/header.php';
             </div>
         </div>
    
-</section> 
-</header>
+
+
 
 <?php
 include 'include/footer.php';

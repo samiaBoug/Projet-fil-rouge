@@ -1,7 +1,7 @@
 <?php 
 //calculer 
 function calucule(){
-    $erreur =[
+    $erreurs =[
         "transport" => "",
         "energie" => "",
         "dechets" => "",
@@ -11,7 +11,7 @@ function calucule(){
     if(isset($_POST['calculer'])){
 
         if(empty($_POST['kmVoiture']) && empty($_POST['kmTransport']) && empty($_POST['kmTaxi']) && empty($_POST['kmVelo']) ){
-            $erreur['transport'] = "";
+            $erreurs['transport'] = "";
         }else{
         $kmkmVoitureoiture = $_POST['kmVoiture'];
         $kmTransport = $_POST['kmTransport'];
@@ -20,7 +20,7 @@ function calucule(){
         }
 
         if(empty($_POST['electricite']) && empty($_POST['gaz'])){
-            $erreur['energie'];
+            $erreurs['energie'];
         }else{
              $electricite = $_POST['electricite'];
              $gaz = $_POST['gaz'];
@@ -67,10 +67,14 @@ function calucule(){
         }
  
 
-    }else{
-    require __DIR__ . '/../view/calculator.php'; 
-       
     }
+     renderCalculator('calculator', ['erreurs' => $erreurs]); 
+       
+    
 }
 
+function renderCalculator($view, $data = []) {
+    extract($data);
+    require __DIR__ . '/../view/' . $view . '.php'; 
+}
 

@@ -1,10 +1,14 @@
 
-$(function(){
+$(function () {
+    $("#formEntreprise").hide();
 $(".personne").click(function (){
-    console.log("personne selected")
+    $("#formEntreprise").hide();
+    $("#formPersonne").show();
 });
 $(".petiteEntreprise").click(function(){
-    console.log("entreprise selected")
+    $("#formPersonne").hide();
+    $("#formEntreprise").show();
+
 
 })
   });

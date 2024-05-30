@@ -1,3 +1,17 @@
+<?php
+
+if(isset($_SESSION['id'])){
+    $isLog = '' ;
+    $notLog = 'hide';
+    if(isset($_SESSION['profil'])){
+    $profil = $_SESSION['profil'];
+}
+}else{
+    $isLog = 'hide';
+    $notLog='';
+}
+
+?>
 <!doctype html>
 <html>
 
@@ -19,35 +33,38 @@
 
 <body>
 
-<header class="min-w-740">
+<header class="min-w-740 ">
     <nav x-data="{ open: false }" class="flex h-auto w-auto  rounded-lg justify-between">
         <div class="flex w-full justify-between ">
-            <div :class="open ? 'hidden':'flex'" class="flex px-6 py-0 w-1/2 items-center 
-          md:w-1/5 md:px-1 md:py-11 md:flex md:items-center "
+            <div :class="open ? 'hidden':'flex'" class="flex px-6 py-0 w-1/2  
+          md:w-1/5 md:px-1 md:py-11 md:flex  "
                 x-transition:enter="transition ease-out duration-300">
-                <a href="index.php?action=home"><img src="public/img/logoGreenScore.png" alt="logo" class="h-24 w-auto "></a>
+                <a href="index.php?action=home" class="flex logo"><img src="public/img/logoGreenScore.png" alt="logo" class="h-24 w-auto  ">Green Score</a>
             </div>
 
             <div x-show="open" x-transition:enter="transition ease-in-out duration-300" class="flex flex-col w-full h-auto
           md:hidden">
-                <div class="flex flex-col items-center justify-center gap-2">
+                <div class="flex flex-col  justify-center gap-2 ">
                     <a href="index.php?action=home">Acceuil</a>
                     <a href="index.php?action=guide">Guide</a>
-                    <a href="index.php?action=calculator">Outil de calcul</a>
+                    <a href="index.php?action=calculator" class="<?= $isLog ?>">Outil de calcul</a>
                     <a href="index.php?action=aboutUs">A propos</a>
                     <a href="index.php?action=contact">Contactez-nous</a>
-                    <a href="index.php?action=login">Login</a>
-                    <a href="index.php?action=signin">Sign Up</a>
+                    <div class="hidden w-1/5  justify-evenly font-semibold
+                                   md:flex <?= $notLog?>">
+                     <a href="index.php?action=login">Login</a>
+                      <a href="index.php?action=signup">Sign Up</a>
+            </div>
                 </div>
             </div>
-            <div class="hidden w-3/5 items-center justify-evenly font-semibold md:flex">
+            <div class="hidden w-3/5 mt-2 justify-evenly font-semibold md:flex">
                 <a href="index.php?action=home">Acceuil</a>
                 <a href="index.php?action=guide">Guide</a>
-                <a href="index.php?action=calculator">Outil de calcul</a>
+                <a href="index.php?action=calculator" class="<?= $isLog ?>">Outil de calcul</a>
                 <a href="index.php?action=aboutUs">A propos</a>
                 <a href="index.php?action=contact">Contactez-nous</a>
             <div class="">
-                <div x-data="{ dropdownOpen: false }" class="relative my-32 ">
+                <div x-data="{ dropdownOpen: false }" class="relative  <?= $isLog ?>">
                     <button @click="dropdownOpen = !dropdownOpen"
                         class="relative z-10 block rounded-md  p-2 focus:outline-none">
                         <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000">
@@ -65,26 +82,27 @@
             
                     </button>
             
-                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10 " ></div>
             
                     <div x-show="dropdownOpen" class="absolute right-0 mt-2 py-2 w-48 rounded-md shadow-xl z-20">
-                        <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                        <a href="index.php?action=profil<?= $profil ?>" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
                             profil
                         </a>
                         <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
                             patamètres
                         </a>
                         <hr>
-                        <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-                            Deconnexion
-                        </a>
+                        <form action="" method="post">
+                          <input type="submit" name="deconnecter" value="Deconnexion" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                        </form>
+                        
                     </div>
                 </div>
             </div>
 
             </div>
             <div class="hidden w-1/5 items-center justify-evenly font-semibold
-          md:flex">
+          md:flex <?= $notLog?>">
                 <a href="index.php?action=login">Login</a>
                 <a href="index.php?action=signup">Sign Up</a>
             </div>
