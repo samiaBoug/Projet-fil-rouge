@@ -4,7 +4,6 @@ include 'include/header.php';
 
 <div class="bg-white border border-solid">
     <div>
-        <img src="public/img/header-background.jpg" alt="" class="border border-solid rounded-10 w-5">
     </div>
     <div>
         <div>Nom de l’entreprise : </div>

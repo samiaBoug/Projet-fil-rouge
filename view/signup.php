@@ -10,32 +10,32 @@ include 'include/header.php';
                     Creer votre compte .
                 </h1>
 
-                <div class="mt-6">
-                    <h1 class="text-gray-500 dark:text-gray-300">Vous etes ?</h1>
+                <div class="">
+                    <h1 class="">Vous etes ?</h1>
 
-                    <div class="mt-3 md:flex md:items-center md:-mx-2">
-                        <button class="petiteEntreprise flex justify-center w-full px-6 py-3 text-white bg-blue-500 rounded-md md:w-auto md:mx-2 focus:outline-none " >
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-1/5 h-1/5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <div class="">
+                        <button class="petiteEntreprise iconSignup" >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
 
-                            <span class="mx-2">
+                            <span class="">
                             Petite entreprise
                             </span>
                         </button>
 
-                        <button class="personne " >
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-1/5 h-1/5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <button class="personne iconSignup" >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
 
-                            <span class="mx-2 ">
+                            <span class=" ">
                                Personne
                             </span>
                         </button>
                     </div>
                 </div>
-                </header>
+                
 
                 <form class="" id="formPersonne" method="post" action="index.php?action=signup">
     <div>
@@ -68,7 +68,7 @@ include 'include/header.php';
         <div class="erreurs"><?php if(isset($erreurs['confirmerMotDePasse'])) { echo htmlspecialchars($erreurs['confirmerMotDePasse']); } ?></div>
     </div>
 
-    <button type="submit" name="signUpUtilis" class="">
+    <button type="submit" name="signUpUtilis" class="connxBoutton btn overflow-hidden relative w-64 bg-blue-500 text-white py-4 px-4 rounded-xl font-bold uppercase -- before:block before:absolute before:h-full before:w-1/2 before:rounded-full before:bg-orange-400 before:top-0 before:left-1/4 before:transition-transform before:opacity-0 before:hover:opacity-100 hover:text-orange-200 hover:before:animate-ping transition-all duration-300">
         <span>S'inscrire</span>
     </button>
 </form>
@@ -96,12 +96,12 @@ include 'include/header.php';
         </div>
             <div>
                 <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Adresse </label>
-                <input type="text" name="adresse" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                <input type="text" name="adresse" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                 <div class="erreurs"><?= htmlspecialchars($erreurs['adresse']) ?></div>
             </div>
             <div>
                 <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email </label>
-                <input type="email" name="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                <input type="email" name="email" placeholder="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                 <div class="erreurs"><?= htmlspecialchars($erreurs['email']) ?></div>
             </div>
 
@@ -119,19 +119,15 @@ include 'include/header.php';
                     </div>
 
                     <button type="submit" name="signUpEntrep"
-                        class="flex items-center justify-between  px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                    class="connxBoutton btn overflow-hidden relative w-64 bg-blue-500 text-white py-4 px-4 rounded-xl font-bold uppercase -- before:block before:absolute before:h-full before:w-1/2 before:rounded-full before:bg-orange-400 before:top-0 before:left-1/4 before:transition-transform before:opacity-0 before:hover:opacity-100 hover:text-orange-200 hover:before:animate-ping transition-all duration-300">
                         <span>S'inscrire </span>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:-scale-x-100" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd" />
-                        </svg>
+                       
                     </button>
                 </form>
             </div>
         </div>
-   
+        </header>
 
 
 

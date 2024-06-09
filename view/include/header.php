@@ -39,7 +39,7 @@ if(isset($_SESSION['id'])){
             <div :class="open ? 'hidden':'flex'" class="flex px-6 py-0 w-1/2  
           md:w-1/5 md:px-1 md:py-11 md:flex  "
                 x-transition:enter="transition ease-out duration-300">
-                <a href="index.php?action=home" class="flex logo"><img src="public/img/logoGreenScore.png" alt="logo" class="h-24 w-auto  ">Green Score</a>
+                <a href="index.php?action=home" class="flex logo"><img src="public/img/logoGreenScore.png" alt="logo" class="h-24 w-auto  "> </a>
             </div>
 
             <div x-show="open" x-transition:enter="transition ease-in-out duration-300" class="flex flex-col w-full h-auto
@@ -51,13 +51,13 @@ if(isset($_SESSION['id'])){
                     <a href="index.php?action=aboutUs">A propos</a>
                     <a href="index.php?action=contact">Contactez-nous</a>
                     <div class="hidden w-1/5  justify-evenly font-semibold
-                                   md:flex <?= $notLog?>">
-                     <a href="index.php?action=login">Login</a>
-                      <a href="index.php?action=signup">Sign Up</a>
-            </div>
+                                   md:flex  <?= $notLog?>">
+                     <a href="index.php?action=login">Se connecter</a>
+                      <a href="index.php?action=signup">S'inscrire</a>
+                    </div>
                 </div>
             </div>
-            <div class="hidden w-3/5 mt-2 justify-evenly font-semibold md:flex">
+            <div class="hidden w-3/5 mt-2 justify-evenly font-semibold md:flex menuNav">
                 <a href="index.php?action=home">Acceuil</a>
                 <a href="index.php?action=guide">Guide</a>
                 <a href="index.php?action=calculeEmprinteCarbone" class="<?= $isLog ?>">Outil de calcul</a>
@@ -102,9 +102,9 @@ if(isset($_SESSION['id'])){
 
             </div>
             <div class="hidden w-1/5 items-center justify-evenly font-semibold
-          md:flex <?= $notLog?>">
-                <a href="index.php?action=login">Login</a>
-                <a href="index.php?action=signup">Sign Up</a>
+          md:flex <?= $notLog?> login-signup">
+                <a href="index.php?action=login">Se connecter</a>
+                <a href="index.php?action=signup">S'inscrire</a>
             </div>
             <button class="text-gray-500 w-10 h-10 relative focus:outline-none 
                           md:hidden

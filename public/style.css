@@ -25,11 +25,141 @@ header {
 .logo{
  margin-top: -3rem;
 }
+.menuNav{
+    margin-top: 3rem;
+}
+
+/* main */
+/* Accueil */
 .green-score {
     color: rgba(101, 183, 65, 1);
     font-weight: bolder;
 }
-/* main */
+.content-header{
+    margin-left: 20%;
+    margin-top: 8%;
+}
+.Bienvenue{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.paragraphBienvenue{
+    margin-top: 5px;
+   
+}
+.divHeader{
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px 40px 10px 20px;
+    width: fit-content;
+    border-radius: 5px;
+}
+.titreBoutton{
+    background-color: rgba(171, 194, 112, 0.74);
+    padding: 9px 5px 9px 10px;
+    margin-left: -17px;
+}
+
+.mainAccueil{
+    margin: -2rem 4rem 4rem 4rem;
+}
+.imgAccueil{
+margin-left: 3rem;
+margin: 0 40px 40px 40px;
+}
+.titreAccueil{
+font-weight: bold;
+font-size: large;
+margin-bottom: 1rem;
+
+}
+.pAccueil{
+    margin-bottom: 3rem;
+}
+.BouttonAccuil{
+    background-color:rgba(254, 200, 104, 1) ;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-top: 5rem;
+}
+
+
+
+/* login */
+.formLogin{
+    padding: 4rem;
+    margin: 3rem 0;
+}
+.connxBoutton{
+    background-color: #3B82F6;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+/*sing in */
+.iconSignup{
+width: 70px;
+height: 70px;
+margin: 1rem 4rem 1rem 4rem;
+}
+#formPersonne {
+    margin: 2rem 30%;
+    width: 19rem;
+    padding: 1rem 3rem;
+}
+#formEntreprise{
+    margin: -3rem 30%;
+    width: 19rem;
+    padding: 1rem 3rem;
+   
+}
+/* outil de calcule */
+.titreHeaderOutil{
+    font-weight: bolder;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-top: -5rem;
+}
+#scroll-icon{
+width: 2rem;
+height: 2rem;
+scroll-behavior: smooth;
+}
+#scroll-icon:hover{
+    cursor: pointer;
+}
+.formOutil{
+  border: none; 
+  margin: 1rem 10%; 
+}
+.categorie{
+    padding: 2rem;
+    border-radius: 5px;
+    border: solid 1px;
+    margin: 1rem 0;
+}
+.titreCateg{
+    font-weight:bolder ;
+    margin: 1rem 0;
+}
+.formOutil input{
+width: 6rem;
+padding: 2px;
+margin: 0 0 2rem 0;
+}
+.formOutil label{
+width: 30rem;
+margin: 0 0 2rem 0;
+}
+
+/*guide */
+.scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+
+
 .erreurs{
     color: brown;
     font-weight: lighter;

@@ -11,4 +11,11 @@ $(".petiteEntreprise").click(function(){
 
 
 })
+
+$('#scroll-icon').click(function() {
+    console.log("clicked");
+    $('html, body').animate({
+      scrollTop: $('#target-section').offset().top
+    }, 1000);
+  });
   });
