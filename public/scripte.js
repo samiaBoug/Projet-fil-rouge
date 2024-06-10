@@ -12,10 +12,7 @@ $(".petiteEntreprise").click(function(){
 
 
 })
-    //graph
-    
-    // Définir les données PHP comme variables JavaScript globales pour le graphique mensuel
-   
+
     // Initialiser le graphique mensuel
     var monthlyCtx = document.getElementById('monthlyChart').getContext('2d');
     new Chart(monthlyCtx, {
@@ -102,5 +99,14 @@ $(".petiteEntreprise").click(function(){
             }
         }
     });
+
+
+
+$('#scroll-icon').click(function() {
+    console.log("clicked");
+    $('html, body').animate({
+      scrollTop: $('#target-section').offset().top
+    }, 1000);
+  });
 
   });

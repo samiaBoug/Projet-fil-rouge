@@ -17,6 +17,9 @@ switch($action){
     case 'contact':
         require __DIR__ . '/view/contact.php';
         break;
+    case 'guide':
+        require __DIR__ . '/view/guide.php';
+         break;
 
     case 'calculeEmprinteCarbone':
         calculer();
