@@ -23,6 +23,7 @@ if(isset($_SESSION['id'])){
 
     <script src="public/jquery-3.7.1.min.js"></script>
     <script src="public/scripte.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

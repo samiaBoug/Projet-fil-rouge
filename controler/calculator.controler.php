@@ -84,7 +84,7 @@ function calculer(){
             } elseif ($profil === 'Entrep') {
                 $idRegister = trouverRegisterEntrep($id, $mois, $profil);
             }
-           
+            
             if ($idRegister) {
                 // Nouveau lignes dans valeur
                 $array = [$kmVoiture, $kmTransport, $kmTaxi, $kmVelo, $electricite, $gaz, $dechets, $nbreRepas];
@@ -92,6 +92,7 @@ function calculer(){
                 for ($i = 0; $i < count($array); $i++) {
                     novValeurs($array[$i], $idRegister['idRegister'], $i+1);
                 }
+                header("location:ndex.php?action=profil$profil");
 
             }
         }
@@ -100,6 +101,7 @@ function calculer(){
     // Rendre la vue avec les erreurs
     renderCalculator('calculator', ['erreurs' => $erreurs]); 
 }
+//statistique : 
 
 function renderCalculator($view, $data = []) {
     extract($data);

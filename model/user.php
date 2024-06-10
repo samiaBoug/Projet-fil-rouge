@@ -49,4 +49,20 @@ function trouverEntrep($email){
     return $petiteEntrep;
 
 }
+ function utilis($id){
+    $conn = getDbConn();
+    $stm = $conn->prepare("select * from utilisateur where idUtilis= :id");
+    $stm->bindParam(':id', $id);
+    $stm->execute();
+    return $stm->fetch(PDO::FETCH_ASSOC);
 
+ }
+
+ function petiteEntrep($id){
+     $conn = getDbConn();
+    $stm = $conn->prepare("select * from petiteentrep wher idEntrep= :id");
+    $stm->bindParam(':id', $id);
+    $stm->execute();
+    return $stm->fetch(PDO::FETCH_ASSOC);
+
+ }

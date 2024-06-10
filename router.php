@@ -1,6 +1,8 @@
 <?php
         require __DIR__ . '/controler/user.controler.php';
         require __DIR__ . '/controler/calculator.controler.php';
+        require __DIR__ . '/controler/profil.controller.php';
+
 
 $action = $_GET['action'];
 

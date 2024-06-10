@@ -193,19 +193,7 @@ if(isset($_POST['deconnecter'])){
 }
 
 // profil
-function profil(){
-    if(isset($_SESSION['id'])){
-        if($_SESSION['profil'] === 'Utilis'){
-            render('profilUtilis');
-        } elseif($_SESSION['profil'] === 'Entrep'){
-            header('Location: index.php?action=profilEntrep');
-        } else {
-            header('Location: index.php?action=login');
-        }
-    } else {
-        header('Location: index.php?action=login');
-    }
-}
+
 
 function render($view, $data = []) {
     extract($data);
